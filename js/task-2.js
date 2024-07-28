@@ -27,7 +27,9 @@ const images = [
 const imagesMarkup = images
   .map(
     image =>
-      `<img src=${image.url} alt=${image.alt} width="30%" height="" class="gallerypic"></img>`
+      `<img src=${image.url} alt=${image.alt} width="${
+        100 / 3
+      }%" class="gallerypic"></img>`
   )
   .join('');
 const gallery = document.querySelector('.gallery');
