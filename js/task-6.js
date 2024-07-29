@@ -18,12 +18,14 @@ create.addEventListener('click', function () {
 
   if (numberOfDivs <= 100) {
     destroyBoxes();
+    const elements = [];
     for (let i = 0; i < numberOfDivs; i++) {
       let elHeight = `${30 + i * 10}px`;
       let elWidth = `${30 + i * 10}px`;
       const element = `<div style="width: ${elWidth}; height: ${elHeight}; background-color: ${getRandomHexColor()}; margin: 2px"></div>`;
-      boxes.insertAdjacentHTML('beforeend', element);
+      elements.push(element);
     }
+    boxes.insertAdjacentHTML('beforeend', elements.join(''));
   }
 });
 

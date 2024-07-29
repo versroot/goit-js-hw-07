@@ -10,7 +10,8 @@ function submitFunc(event) {
 
   if (email === '' || password === '') {
     alert('All form fields must be filled in');
+  } else {
+    console.log(`E-mail: ${email}, Password: ${password}`);
+    formLog.reset();
   }
-  console.log(`E-mail: ${email}, Password: ${password}`);
-  formLog.reset();
 }
