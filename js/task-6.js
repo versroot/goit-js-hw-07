@@ -16,7 +16,7 @@ const destroyBoxes = event => {
 create.addEventListener('click', function () {
   let numberOfDivs = inputNum.value;
 
-  if (numberOfDivs <= 100) {
+  if (numberOfDivs <= 100 && numberOfDivs > 0) {
     destroyBoxes();
     const elements = [];
     for (let i = 0; i < numberOfDivs; i++) {
